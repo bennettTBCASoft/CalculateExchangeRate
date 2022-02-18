@@ -13,6 +13,9 @@
 		91C3E7C127BF2CB9008A6945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C3E7BF27BF2CB9008A6945 /* Main.storyboard */; };
 		91C3E7C327BF2CBB008A6945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C3E7C227BF2CBB008A6945 /* Assets.xcassets */; };
 		91C3E7C627BF2CBB008A6945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C3E7C427BF2CBB008A6945 /* LaunchScreen.storyboard */; };
+		91C3E7CF27BF2E12008A6945 /* CalculateExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3E7CD27BF2E12008A6945 /* CalculateExchangeRateViewController.swift */; };
+		91C3E7D027BF2E12008A6945 /* CalculateExchangeRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C3E7CE27BF2E12008A6945 /* CalculateExchangeRateViewController.xib */; };
+		91C3E7D227BF3E5C008A6945 /* CustomizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3E7D127BF3E5C008A6945 /* CustomizedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		91C3E7C227BF2CBB008A6945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C3E7C527BF2CBB008A6945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C3E7C727BF2CBB008A6945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C3E7CD27BF2E12008A6945 /* CalculateExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateExchangeRateViewController.swift; sourceTree = "<group>"; };
+		91C3E7CE27BF2E12008A6945 /* CalculateExchangeRateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateExchangeRateViewController.xib; sourceTree = "<group>"; };
+		91C3E7D127BF3E5C008A6945 /* CustomizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				91C3E7BB27BF2CB9008A6945 /* SceneDelegate.swift */,
 				91C3E7BD27BF2CB9008A6945 /* ViewController.swift */,
 				91C3E7BF27BF2CB9008A6945 /* Main.storyboard */,
+				91C3E7CD27BF2E12008A6945 /* CalculateExchangeRateViewController.swift */,
+				91C3E7CE27BF2E12008A6945 /* CalculateExchangeRateViewController.xib */,
+				91C3E7D127BF3E5C008A6945 /* CustomizedButton.swift */,
 				91C3E7C227BF2CBB008A6945 /* Assets.xcassets */,
 				91C3E7C427BF2CBB008A6945 /* LaunchScreen.storyboard */,
 				91C3E7C727BF2CBB008A6945 /* Info.plist */,
@@ -125,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C3E7D027BF2E12008A6945 /* CalculateExchangeRateViewController.xib in Resources */,
 				91C3E7C627BF2CBB008A6945 /* LaunchScreen.storyboard in Resources */,
 				91C3E7C327BF2CBB008A6945 /* Assets.xcassets in Resources */,
 				91C3E7C127BF2CB9008A6945 /* Main.storyboard in Resources */,
@@ -138,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C3E7CF27BF2E12008A6945 /* CalculateExchangeRateViewController.swift in Sources */,
 				91C3E7BE27BF2CB9008A6945 /* ViewController.swift in Sources */,
 				91C3E7BA27BF2CB9008A6945 /* AppDelegate.swift in Sources */,
+				91C3E7D227BF3E5C008A6945 /* CustomizedButton.swift in Sources */,
 				91C3E7BC27BF2CB9008A6945 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

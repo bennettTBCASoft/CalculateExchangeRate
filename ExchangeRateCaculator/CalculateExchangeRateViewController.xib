@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateExchangeRateViewController" customModule="ExchangeRateCaculator" customModuleProvider="target">
+            <connections>
+                <outlet property="exchangeLb" destination="6aq-uz-gfG" id="cXE-3g-ykn"/>
+                <outlet property="jpyTF" destination="29z-A9-JH5" id="qoG-ol-Mf9"/>
+                <outlet property="twdTF" destination="kQN-yI-U6l" id="fUQ-n8-0wE"/>
+                <outlet property="type1LB" destination="Sea-md-Rt4" id="7BV-A8-Y0a"/>
+                <outlet property="type2LB" destination="S4L-Ap-ZxB" id="9RC-D8-EDk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="calBtn" destination="6Ql-sz-fmw" collectionClass="NSMutableArray" id="GXH-dT-tLO"/>
+                <outletCollection property="calBtn" destination="frs-QI-ewB" collectionClass="NSMutableArray" id="3pl-05-72u"/>
+                <outletCollection property="calBtn" destination="8VJ-0i-bAO" collectionClass="NSMutableArray" id="xQp-6F-0jQ"/>
+                <outletCollection property="calBtn" destination="GAf-XE-Rtz" collectionClass="NSMutableArray" id="w5T-rW-jzh"/>
+                <outletCollection property="calBtn" destination="Eg5-Cj-2TX" collectionClass="NSMutableArray" id="dtf-3e-tGj"/>
+                <outletCollection property="calBtn" destination="Moq-IW-6cu" collectionClass="NSMutableArray" id="D2A-Dq-ofz"/>
+                <outletCollection property="calBtn" destination="hob-yQ-bYJ" collectionClass="NSMutableArray" id="8nW-l7-4ly"/>
+                <outletCollection property="calBtn" destination="XhI-rd-LVy" collectionClass="NSMutableArray" id="HFj-mq-UhD"/>
+                <outletCollection property="calBtn" destination="ZG7-q5-uU3" collectionClass="NSMutableArray" id="8CU-iP-iBQ"/>
+                <outletCollection property="calBtn" destination="rLv-sq-pLn" collectionClass="NSMutableArray" id="OF1-uO-QQy"/>
+                <outletCollection property="calBtn" destination="wi9-fe-jPq" collectionClass="NSMutableArray" id="i79-X9-nq8"/>
+                <outletCollection property="calBtn" destination="EMz-aY-o2U" collectionClass="NSMutableArray" id="Yh3-ie-M8w"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HSE-QS-Cu9">
+                    <rect key="frame" x="32" y="388.5" width="350" height="358.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xI9-cO-chB">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="85"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ql-sz-fmw" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="1"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="D7Q-rX-uvp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frs-QI-ewB" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="120" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="2"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="Z3P-tA-czu"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VJ-0i-bAO" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="240" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="3"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="dre-Ug-KeM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-Yz-Zpa">
+                            <rect key="frame" x="0.0" y="91" width="350" height="85.5"/>
+                            <subviews>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAf-XE-Rtz" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="85.5"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="4"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="TM3-Md-0s2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg5-Cj-2TX" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="120" y="0.0" width="110" height="85.5"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="1XX-wL-fzq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-IW-6cu" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="240" y="0.0" width="110" height="85.5"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="6"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="N3s-NW-WK7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="anW-F6-Mce">
+                            <rect key="frame" x="0.0" y="182.5" width="350" height="85"/>
+                            <subviews>
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hob-yQ-bYJ" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="7"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="ClK-FX-I6G"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhI-rd-LVy" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="120" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="aJA-Yv-TBr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG7-q5-uU3" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="240" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="9"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="cjX-oB-art"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aF9-8b-t5W">
+                            <rect key="frame" x="0.0" y="273.5" width="350" height="85"/>
+                            <subviews>
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi9-fe-jPq" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="C"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="ax1-Dx-INL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLv-sq-pLn" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="120" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="GJ4-sT-mDR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMz-aY-o2U" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                                    <rect key="frame" x="240" y="0.0" width="110" height="85"/>
+                                    <color key="backgroundColor" red="0.90739184620000002" green="0.93830186130000004" blue="0.94989019630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="←"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickCalBtn:" destination="-1" eventType="touchUpInside" id="d73-d7-0tv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qqB-x8-sLF">
+                    <rect key="frame" x="30" y="792" width="354" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-B2-D4O" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
+                            <color key="backgroundColor" red="0.2080174387" green="0.47857123610000002" blue="0.76865988969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="CLEAR"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-4r-leO" customClass="CustomizedButton" customModule="ExchangeRateCaculator" customModuleProvider="target">
+                            <rect key="frame" x="182" y="0.0" width="172" height="50"/>
+                            <color key="backgroundColor" red="0.2080174387" green="0.47857123610000002" blue="0.76865988969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="SUBMIT"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZRH-1W-pEU"/>
+                    </constraints>
+                </stackView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29z-A9-JH5">
+                    <rect key="frame" x="30" y="259.5" width="354" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gnx-Nb-KrC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQN-yI-U6l">
+                    <rect key="frame" x="30" y="322.5" width="354" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="780" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hRG-tz-S2J">
+                    <rect key="frame" x="30" y="56" width="354" height="183.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculate Exchange Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfh-Ln-q1B">
+                            <rect key="frame" x="0.0" y="0.0" width="320.5" height="73.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxa-Ni-ygn">
+                            <rect key="frame" x="0.0" y="73.5" width="102.5" height="36.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.2080174387" green="0.47857123610000002" blue="0.76865988969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-ht-XMa">
+                            <rect key="frame" x="0.0" y="110" width="115" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUX-cC-ut5">
+                            <rect key="frame" x="0.0" y="147" width="354" height="36.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-lu-tmi">
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="36.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-Mo-HIY">
+                                    <rect key="frame" x="123" y="0.0" width="186" height="36.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="780" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhP-s3-4Rg">
+                                            <rect key="frame" x="0.0" y="0.0" width="7.5" height="36.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="780" text="JPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sea-md-Rt4">
+                                            <rect key="frame" x="14.5" y="0.0" width="29.5" height="36.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="780" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjG-MN-5h6">
+                                            <rect key="frame" x="51" y="0.0" width="20.5" height="36.5"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="arrow.left.arrow.right" catalog="system"/>
+                                            <connections>
+                                                <action selector="switchCurrencyAction:" destination="-1" eventType="touchUpInside" id="bmh-bg-pjg"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0.24135" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6aq-uz-gfG">
+                                            <rect key="frame" x="78.5" y="0.0" width="62" height="36.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="780" text="TWD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4L-Ap-ZxB">
+                                            <rect key="frame" x="147.5" y="0.0" width="38.5" height="36.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="Ilc-zX-huW">
+                                    <rect key="frame" x="319" y="0.0" width="35" height="36.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gxa-Ni-ygn" firstAttribute="height" secondItem="jhW-ht-XMa" secondAttribute="height" multiplier="1:1" id="L5F-iG-bmj"/>
+                        <constraint firstItem="Swa-lu-tmi" firstAttribute="width" secondItem="hRG-tz-S2J" secondAttribute="width" multiplier="0.319209" id="NRF-QD-oMV"/>
+                        <constraint firstItem="ZUX-cC-ut5" firstAttribute="width" secondItem="hRG-tz-S2J" secondAttribute="width" id="UQ3-LG-56f"/>
+                        <constraint firstItem="ZUX-cC-ut5" firstAttribute="height" secondItem="jhW-ht-XMa" secondAttribute="height" id="VAJ-24-E97"/>
+                        <constraint firstItem="cfh-Ln-q1B" firstAttribute="height" secondItem="jhW-ht-XMa" secondAttribute="height" multiplier="2:1" id="ybS-9d-nWb"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-VD-DOP">
+                    <rect key="frame" x="40" y="272.5" width="34.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TWD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpC-po-6Pw">
+                    <rect key="frame" x="40" y="328.5" width="34.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qqB-x8-sLF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="1qq-Kn-wyb"/>
+                <constraint firstItem="kQN-yI-U6l" firstAttribute="height" secondItem="29z-A9-JH5" secondAttribute="height" multiplier="1.2:2" id="289-pI-Cv8"/>
+                <constraint firstItem="qqB-x8-sLF" firstAttribute="trailing" secondItem="hRG-tz-S2J" secondAttribute="trailing" id="49A-en-FMs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qqB-x8-sLF" secondAttribute="trailing" constant="30" id="87i-iq-CBR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qqB-x8-sLF" secondAttribute="bottom" constant="20" id="87o-Ky-ZwV"/>
+                <constraint firstItem="kQN-yI-U6l" firstAttribute="leading" secondItem="tpC-po-6Pw" secondAttribute="leading" constant="-10" id="8mL-Gt-JVC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="29z-A9-JH5" secondAttribute="trailing" constant="30" id="BDb-d4-dCW"/>
+                <constraint firstItem="29z-A9-JH5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="DCU-1Q-ox9"/>
+                <constraint firstItem="kQN-yI-U6l" firstAttribute="trailing" secondItem="29z-A9-JH5" secondAttribute="trailing" id="Gc7-nJ-cA9"/>
+                <constraint firstItem="HSE-QS-Cu9" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.845411" id="HPH-KQ-Fet"/>
+                <constraint firstItem="HSE-QS-Cu9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="KK9-jt-sW5"/>
+                <constraint firstItem="nKN-VD-DOP" firstAttribute="centerY" secondItem="29z-A9-JH5" secondAttribute="centerY" id="MWJ-k4-SI2"/>
+                <constraint firstItem="kQN-yI-U6l" firstAttribute="top" secondItem="29z-A9-JH5" secondAttribute="bottom" constant="13" id="OZE-xz-pHZ"/>
+                <constraint firstItem="29z-A9-JH5" firstAttribute="leading" secondItem="nKN-VD-DOP" secondAttribute="leading" constant="-10" id="SUU-U9-z7y"/>
+                <constraint firstItem="HSE-QS-Cu9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xf9-Xd-tKf"/>
+                <constraint firstItem="hRG-tz-S2J" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="efR-fh-9t7"/>
+                <constraint firstItem="tpC-po-6Pw" firstAttribute="centerY" secondItem="kQN-yI-U6l" secondAttribute="centerY" id="feq-c3-coI"/>
+                <constraint firstItem="HSE-QS-Cu9" firstAttribute="top" secondItem="kQN-yI-U6l" secondAttribute="bottom" constant="36" id="fmG-0j-lBs"/>
+                <constraint firstItem="kQN-yI-U6l" firstAttribute="leading" secondItem="29z-A9-JH5" secondAttribute="leading" id="nHN-it-Ffd"/>
+                <constraint firstItem="hRG-tz-S2J" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pFf-fj-XjY"/>
+                <constraint firstItem="29z-A9-JH5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rb4-jh-Mtc"/>
+                <constraint firstItem="qqB-x8-sLF" firstAttribute="top" secondItem="HSE-QS-Cu9" secondAttribute="bottom" constant="45" id="urG-kS-jYe"/>
+                <constraint firstItem="29z-A9-JH5" firstAttribute="top" secondItem="hRG-tz-S2J" secondAttribute="bottom" constant="20" id="vRL-2o-aRt"/>
+                <constraint firstItem="hRG-tz-S2J" firstAttribute="leading" secondItem="29z-A9-JH5" secondAttribute="leading" id="wmR-96-b6s"/>
+                <constraint firstItem="qqB-x8-sLF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yNY-TL-ira"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6Ql-sz-fmw">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="8VJ-0i-bAO">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="Dmj-4r-leO">
+            <size key="intrinsicContentSize" width="76.5" height="31"/>
+        </designable>
+        <designable name="EMz-aY-o2U">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="Eg5-Cj-2TX">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="GAf-XE-Rtz">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="Moq-IW-6cu">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="XhI-rd-LVy">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="ZG7-q5-uU3">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="frs-QI-ewB">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="hob-yQ-bYJ">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="qWe-B2-D4O">
+            <size key="intrinsicContentSize" width="68.5" height="31"/>
+        </designable>
+        <designable name="rLv-sq-pLn">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="wi9-fe-jPq">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow.left.arrow.right" catalog="system" width="119" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
