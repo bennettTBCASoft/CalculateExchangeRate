@@ -53,6 +53,9 @@ class CalculateExchangeRateViewController: UIViewController, UITextFieldDelegate
     
     
     @IBAction func clickCalBtn(_ sender: UIButton) {
+        if jpyTF.text!.count >= 19 && sender.tag != 10 && sender.tag != 11 {
+            return
+        }
         
         switch sender.tag {
         case 0:
@@ -109,10 +112,5 @@ class CalculateExchangeRateViewController: UIViewController, UITextFieldDelegate
             exchangeLb.text = "0.24135"
             changeBool = true
         }
-        
-        
-        
     }
-    
-
 }
