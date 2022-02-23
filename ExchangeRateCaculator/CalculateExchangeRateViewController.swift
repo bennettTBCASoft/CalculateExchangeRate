@@ -27,21 +27,24 @@ class CalculateExchangeRateViewController: UIViewController, UITextFieldDelegate
         jpyTF.delegate = self
         twdTF.isEnabled = false
         
-//        jpyTF.addTarget(self, action: #selector(textFieldDidChangeSelection(_:)), for: .editingChanged)
         
-        jpyTF.addObserver(self, forKeyPath: "text", options: NSKeyValueObservingOptions.new, context: nil)
+        jpyTF.addObserver(self, forKeyPath: "text", options: [.new, .old ], context: nil)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "text" && object as? NSObject == self.jpyTF {
-//            print(jpyTF.text!)
-            if let jpyNumber = Double(jpyTF.text!) {
+            if let jpyNumber = Double((change![.newKey])! as! String) {
                 if let result = Optional(jpyNumber * 0.24135) {
                     print(result)
                     twdTF.text = String(lround(result)) // lround：整數四捨五入
                 }
             }
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        jpyTF.removeObserver(self, forKeyPath: "text")
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
